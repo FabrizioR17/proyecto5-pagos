@@ -15,6 +15,6 @@ class Pagos(models.Model):
         choices=Servicios.choices,
         default=Servicios.NETFLIX,
     )
-    fecha_pago = models.DateField(auto_now_add=True)
+    fecha_pago = models.DateTimeField(auto_now_add=True)
     usuario = models.ForeignKey(User, on_delete =models.CASCADE, related_name='users')
     monto = models.FloatField(default=0.0)
